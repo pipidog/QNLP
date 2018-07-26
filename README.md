@@ -87,6 +87,8 @@ Based on the discussion above, the hyperparameters are much less than RNN. Also 
 	  <img src="./img/pred_usage.png">
 	 </p>
 
+## How to use your own deep learning models?
+If you're not satisified with the default deep learning models, you can build your own models using Keras. Save the model as a keras model object in work_dir/output/model.h5. Then the later methods such as model.train and model.test will automatically load the model. 
 
 
 

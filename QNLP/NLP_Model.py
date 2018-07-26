@@ -11,7 +11,7 @@ from keras.models import Model, Sequential, load_model
 from keras.optimizers import SGD, Adam, RMSprop
 from keras.utils import to_categorical, plot_model
 
-from CNLP.NLP_Base import nlp_base
+from QNLP.NLP_Base import nlp_base
 
 np.random.seed(0)
 

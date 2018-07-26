@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from keras.models import load_model
 
-from CNLP.NLP_Base import nlp_base
+from QNLP.NLP_Base import nlp_base
 
 np.random.seed(0)
 

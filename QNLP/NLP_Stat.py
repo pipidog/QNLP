@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib.font_manager import FontProperties
 
-from CNLP.NLP_Base import nlp_base
+from QNLP.NLP_Base import nlp_base
 
 
 class nlp_stat(nlp_base):
@@ -78,7 +78,7 @@ class nlp_stat(nlp_base):
         ''' 
         print('\n\\n>>>>>>>>>>> vis_stat <<<<<<<<<<<<<')
         assert n_show < 500, 'max of n_show is 500'
-        
+
         # load data
         token_freq = pickle.load(open(self.wkdir+ 'output/stat_freq.pkl','rb'))
         top_list = token_freq.most_common(500)
@@ -102,7 +102,7 @@ class nlp_stat(nlp_base):
         sns.set(style="whitegrid")
         f, ax = plt.subplots(figsize=(6,8.5))
         sns.barplot(x=val[:n_show], y=keys[:n_show])
-        ax.set_yticklabels(keys, fontproperties=myfont) 
+        ax.set_yticklabels(keys) 
         plt.title('word frequency')
         plt.savefig(self.wkdir+'output/stat_freq.png')
         plt.show()
